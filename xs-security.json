@@ -1,0 +1,28 @@
+{
+  "xsappname": "fiori",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+      "name": "uaa.user",
+      "description": "UAA"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Token_Exchange",
+      "description": "UAA",
+      "scope-references": [
+        "uaa.user"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "token-validity" : 900,
+    "redirect-uris" : [
+      "https://org-cf-dev-z31c7rt7-dev-fiori-approuter.cfapps.us10-001.hana.ondemand.com/",
+      "https://org-cf-qua-inizfxta-qua-fiori-approuter.cfapps.us10-001.hana.ondemand.com/",
+      "https://org-cf-pro-ohcxm2mt-pro-fiori-approuter.cfapps.us10-001.hana.ondemand.com/"
+    ]
+  }
+}
